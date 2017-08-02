@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/gpicon">
+        <file>images/icon/GamePage_GG.png</file>
+        <file>images/icon/GamePage_revert.png</file>
+        <file>images/icon/GamePage_Medal.png</file>
+        <file>images/icon/GamePage_attack.png</file>
+        <file>images/icon.png</file>
+        <file>images/icon/help.png</file>
+        <file>images/icon/save.png</file>
+        <file>images/icon/OPEN.png</file>
+        <file>images/icon/GamePage_quit.png</file>
+        <file>images/icon/new.png</file>
+        <file>images/icon/save-as.png</file>
+        <file>images/icon/enemy.bmp</file>
+        <file>images/icon/me.BMP</file>
+        <file>images/icon/ListAdd.png</file>
+        <file>images/icon/ListChange.png</file>
+        <file>images/icon/ListDelete.png</file>
+        <file>images/icon/ListSearch.png</file>
+        <file>images/winpage/继续游戏.png</file>
+        <file>images/winpage/胜利.png</file>
+        <file>images/winpage/victory.png</file>
+        <file>images/winpage/defeat.png</file>
+    </qresource>
+</RCC>

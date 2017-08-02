@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GamePage</class>
+ <widget class="QMainWindow" name="GamePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>743</width>
+    <height>542</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="cache">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>380</y>
+      <width>622</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="gamepageicon.qrc">
+      <normaloff>:/gpicon/images/icon/GamePage_attack.png</normaloff>:/gpicon/images/icon/GamePage_attack.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ProcessStatus">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>170</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>进行战斗</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="History">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>320</y>
+      <width>541</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>370</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="myTableWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>181</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>英雄：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>生命值：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>攻击力：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>护甲：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>魔法值：</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="enemyTableWidget">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>30</y>
+      <width>181</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>英雄：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>生命值：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>攻击力：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>护甲：</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>魔法值：</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>743</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_R"/>
+    <addaction name="action_A"/>
+   </widget>
+   <widget class="QMenu" name="menu_menu">
+    <property name="title">
+     <string>菜单(&amp;M)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_revert"/>
+    <addaction name="action_quit"/>
+    <addaction name="action_GG"/>
+   </widget>
+   <widget class="QMenu" name="menu_record">
+    <property name="title">
+     <string>记录(&amp;R)</string>
+    </property>
+    <addaction name="actionfind_F"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>存档(&amp;S)</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="action_S"/>
+    <addaction name="action_A_2"/>
+    <addaction name="action_O"/>
+   </widget>
+   <addaction name="menu_menu"/>
+   <addaction name="menu_S"/>
+   <addaction name="menu_record"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="attack"/>
+   <addaction name="medal"/>
+  </widget>
+  <action name="action_revert">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/GamePage_revert.png</normaloff>:/gpicon/images/icon/GamePage_revert.png</iconset>
+   </property>
+   <property name="text">
+    <string>重新开始任务(&amp;R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/GamePage_quit.png</normaloff>:/gpicon/images/icon/GamePage_quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出任务(&amp;Q)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_GG">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/GamePage_GG.png</normaloff>:/gpicon/images/icon/GamePage_GG.png</iconset>
+   </property>
+   <property name="text">
+    <string>返回Windows(&amp;Q)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="medal">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/GamePage_Medal.png</normaloff>:/gpicon/images/icon/GamePage_Medal.png</iconset>
+   </property>
+   <property name="text">
+    <string>排行榜(&amp;C)</string>
+   </property>
+   <property name="statusTip">
+    <string>打开排行榜</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="attack">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/GamePage_attack.png</normaloff>:/gpicon/images/icon/GamePage_attack.png</iconset>
+   </property>
+   <property name="text">
+    <string>攻击</string>
+   </property>
+   <property name="statusTip">
+    <string>普通攻击</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/save.png</normaloff>:/gpicon/images/icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/help.png</normaloff>:/gpicon/images/icon/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>规则说明(&amp;R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon.png</normaloff>:/gpicon/images/icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/OPEN.png</normaloff>:/gpicon/images/icon/OPEN.png</iconset>
+   </property>
+   <property name="text">
+    <string>读取(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_N">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/new.png</normaloff>:/gpicon/images/icon/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建存档(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="icon">
+    <iconset resource="gamepageicon.qrc">
+     <normaloff>:/gpicon/images/icon/save-as.png</normaloff>:/gpicon/images/icon/save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionfind_F">
+   <property name="text">
+    <string>find(&amp;F)</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="gamepageicon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
