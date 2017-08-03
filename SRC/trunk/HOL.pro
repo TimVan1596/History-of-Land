@@ -25,12 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
     logindlg.cpp \
-    kingdom.cpp \
     settingpage.cpp \
     set_customkingdom.cpp \
-    customkingdom_add.cpp \
-    customkingdom_change.cpp \
-    customkingdom_find.cpp \
     gameover.cpp \
     gamerecord.cpp \
     SystemWindow.cpp \
@@ -43,12 +39,8 @@ SOURCES += main.cpp\
 
 HEADERS  += \
     logindlg.h \
-    kingdom.h \
     settingpage.h \
     set_customkingdom.h \
-    customkingdom_add.h \
-    customkingdom_change.h \
-    customkingdom_find.h \
     gameover.h \
     gamerecord.h \
     SystemWindow.h \

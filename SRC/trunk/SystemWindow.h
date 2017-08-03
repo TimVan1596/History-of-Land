@@ -34,7 +34,6 @@ private slots:
     void on_freeLgends_clicked();
 
 signals:
- // void sendModelData(QStandardItemModel *legend);
     void sendModelData(QStandardItemModel *);
 private:
     Ui::SystemWindow *ui;

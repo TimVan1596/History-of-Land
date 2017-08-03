@@ -40,9 +40,10 @@ ClassicMode::ClassicMode(bool setEditorVisible, bool setProcessVisible,
 
     srand((unsigned)time(NULL));
     selectedRow =rand()%HERO_NUMS; //随机获取英雄行
-    for(int cache_i = 0 ; cache_i < 4  ; cache_i++ ){
+    for(int cache_i = 0 ; cache_i < 5  ; cache_i++ ){
         enemyHero.append(Legendsmodel->item(selectedRow,cache_i)->text()) ;
     }
+    //将国家的5个属性存进selectedHero
 
 }
 

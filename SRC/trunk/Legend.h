@@ -6,7 +6,7 @@
 class Legend
 {
 public:
-    void initiate(QString name,int ATK,int DFS,int MP);
+    void initiate(QString name,int HP,int ATK,int DFS,int MP);
     Legend();
 
     QString name; //英雄的名字

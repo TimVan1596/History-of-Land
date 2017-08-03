@@ -30,11 +30,12 @@ Game::Game(QWidget *parent) :
     QVBoxLayout *layout = new QVBoxLayout(findDlg);
     layout->addWidget(findLineEdit);
     layout->addWidget(btn);
-    round_count = 0;
     //connect(btn,&QPushButton::clicked(true),this,&GamePage::showFindText());
     //connect(btn, QPushButton::clicked, this, GamePage::showFindText());
     ui->History->setReadOnly(true);
     sumHurt = 0;
+    round_count = 0;
+
 }
 
 Game::~Game()
@@ -194,21 +195,21 @@ void Game::on_pushButton_clicked()
     QString cache = QString("第 %1 轮\n").arg(c);
     ui->History->insertPlainText(cache);
     if(my.attack(enemy)){
-        ui->History->insertPlainText("己方胜利！\n");
+        ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
     }
     else {
-        ui->History->insertPlainText("可恶，敌人胜利！\n");
+        ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
     }
 
     if(enemy.attack(my)){
-        ui->History->insertPlainText("可恶，敌人胜利！\n\n");
+        ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
     }
     else {
-        ui->History->insertPlainText("己方胜利！\n\n");
+        ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
     }
 
     sumHurt +=my.round_hurt;
-    ui->History->insertPlainText("总伤害为 :"+QString::number(sumHurt,10));
+    ui->History->insertPlainText("总伤害为 :"+QString::number(sumHurt,10)+"\n");
 
     updateTableWidget();
     if(my.isAlive == false ||enemy.isAlive ==false ){
@@ -235,9 +236,8 @@ void Game::receiveclose(bool x)
 void Game::receiveLegendData(QList<QString> receiveData,QList<QString> enemyData)
 {
 
-    my.initiate(receiveData.at(0),receiveData.at(1).toInt(),my.DFS = receiveData.at(2).toInt(),receiveData.at(3).toInt());
-    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+5),(enemy.DFS = enemyData.at(2).toInt()+5),(enemyData.at(3).toInt()+5));
-    enemy.HP += 5;
+    my.initiate(receiveData.at(0),receiveData.at(1).toInt(), receiveData.at(2).toInt(),receiveData.at(3).toInt(),receiveData.at(4).toInt());
+    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+5),(enemyData.at(2).toInt()+5),(enemyData.at(3).toInt()+5),(enemyData.at(4).toInt()+5));
     //Legend类的my和enemy接收从外部发过来的数据
 
     myName = new QTableWidgetItem(my.name);

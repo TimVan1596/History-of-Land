@@ -103,27 +103,27 @@
     </property>
     <row>
      <property name="text">
-      <string>英雄：</string>
+      <string>帝国：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>生命值：</string>
+      <string>领土面积：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>攻击力：</string>
+      <string>军队：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>护甲：</string>
+      <string>守备：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>魔法值：</string>
+      <string>国民幸福度：</string>
      </property>
     </row>
     <column>
@@ -143,27 +143,27 @@
     </property>
     <row>
      <property name="text">
-      <string>英雄：</string>
+      <string>帝国：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>生命值：</string>
+      <string>领土面积：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>攻击力：</string>
+      <string>军队：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>护甲：</string>
+      <string>守备：</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>魔法值：</string>
+      <string>国民幸福度：</string>
      </property>
     </row>
     <column>

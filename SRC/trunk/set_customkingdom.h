@@ -2,7 +2,7 @@
 #define SET_CUSTOMKINGDOM_H
 
 #include <QDialog>
-#include "mystate.h"
+//#include "mystate.h"
 namespace Ui {
 class Set_customKingdom;
 }
@@ -16,8 +16,8 @@ public:
     ~Set_customKingdom();
 private slots:
     void on_Quit_clicked();
-    void receiveData(MyState x);
-    void receiveChangeData(MyState x);
+    void receiveData();
+    void receiveChangeData();
 
     void on_pushButton_clicked();
 

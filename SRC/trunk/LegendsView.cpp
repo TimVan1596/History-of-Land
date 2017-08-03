@@ -23,7 +23,7 @@ void LegendsView::on_okButton_clicked()
     isSelected = true;
     // 点击确定，改变selectedHero，外部页面将通过selectedHero获得所选的英雄
      int selectedRow = ui->LegendsTableView->currentIndex().row(); //获取当前选中行
-    for(int cache_i = 0 ; cache_i < 4  ; cache_i++ ){
+    for(int cache_i = 0 ; cache_i < 5  ; cache_i++ ){
         selectedHero.append(legendData->item(selectedRow,cache_i)->text());
     }
     close();

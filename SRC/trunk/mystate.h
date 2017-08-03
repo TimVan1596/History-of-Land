@@ -1,11 +1,11 @@
-#ifndef MYSTATE_H
-#define MYSTATE_H
-#include "kingdom.h"
+//#ifndef MYSTATE_H
+//#define MYSTATE_H
+////#include "kingdom.h"
 
-class MyState:public kingdom {
-public:
-    MyState():kingdom() {
-    }
-};
+//class MyState:public kingdom {
+//public:
+//    MyState():kingdom() {
+//    }
+//};
 
-#endif // MYSTATE_H
+//#endif // MYSTATE_H
