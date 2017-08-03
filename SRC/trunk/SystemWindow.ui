@@ -33,7 +33,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#ad0400;&quot;&gt;Age of Empires&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#ad0400;&quot;&gt;帝国时代&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#081ead;&quot;&gt;特别版-英雄联盟&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#ad0400;&quot;&gt;History of Land&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#ad0400;&quot;&gt;千古江山&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -84,7 +84,7 @@ color:rgb(185, 40, 35);
 }</string>
        </property>
        <property name="text">
-        <string>经典模式</string>
+        <string>千古江山</string>
        </property>
       </widget>
      </item>
@@ -135,7 +135,7 @@ color:rgb(185, 40, 35);
 }</string>
        </property>
        <property name="text">
-        <string>大乱斗模式</string>
+        <string>快战一场</string>
        </property>
       </widget>
      </item>
@@ -186,7 +186,7 @@ color:rgb(185, 40, 35);
 }</string>
        </property>
        <property name="text">
-        <string>查看本周免费英雄</string>
+        <string>沙盘点兵</string>
        </property>
       </widget>
      </item>
@@ -301,7 +301,7 @@ color:rgb(185, 40, 35);
           </size>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;V 0.2.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;V 0.2.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>

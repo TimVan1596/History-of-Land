@@ -16,7 +16,6 @@ class ClassicMode;
 class ClassicMode : public QDialog
 {
     Q_OBJECT
-w
 public:
     explicit ClassicMode(QWidget *parent = 0);
     ~ClassicMode();

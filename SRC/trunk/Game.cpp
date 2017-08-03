@@ -236,7 +236,8 @@ void Game::receiveLegendData(QList<QString> receiveData,QList<QString> enemyData
 {
 
     my.initiate(receiveData.at(0),receiveData.at(1).toInt(),my.DFS = receiveData.at(2).toInt(),receiveData.at(3).toInt());
-    enemy.initiate(enemyData.at(0),enemyData.at(1).toInt(),my.DFS = enemyData.at(2).toInt(),enemyData.at(3).toInt());
+    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+5),(enemy.DFS = enemyData.at(2).toInt()+5),(enemyData.at(3).toInt()+5));
+    enemy.HP += 5;
     //Legend类的my和enemy接收从外部发过来的数据
 
     myName = new QTableWidgetItem(my.name);

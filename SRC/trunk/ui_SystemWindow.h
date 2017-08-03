@@ -218,13 +218,13 @@ public:
     void retranslateUi(QMainWindow *SystemWindow)
     {
         SystemWindow->setWindowTitle(QApplication::translate("SystemWindow", "MainPage", Q_NULLPTR));
-        MainTitle->setText(QApplication::translate("SystemWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600; color:#ad0400;\">Age of Empires</span></p><p align=\"center\"><span style=\" font-size:18pt; font-weight:600; color:#ad0400;\">\345\270\235\345\233\275\346\227\266\344\273\243</span></p><p align=\"center\"><span style=\" font-size:16pt; font-weight:600; color:#081ead;\">\347\211\271\345\210\253\347\211\210-\350\213\261\351\233\204\350\201\224\347\233\237</span></p></body></html>", Q_NULLPTR));
-        ClassicGame->setText(QApplication::translate("SystemWindow", "\347\273\217\345\205\270\346\250\241\345\274\217", Q_NULLPTR));
-        BrawlGame->setText(QApplication::translate("SystemWindow", "\345\244\247\344\271\261\346\226\227\346\250\241\345\274\217", Q_NULLPTR));
-        freeLgends->setText(QApplication::translate("SystemWindow", "\346\237\245\347\234\213\346\234\254\345\221\250\345\205\215\350\264\271\350\213\261\351\233\204", Q_NULLPTR));
+        MainTitle->setText(QApplication::translate("SystemWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt; font-weight:600; color:#ad0400;\">History of Land</span></p><p align=\"center\"><span style=\" font-size:20pt; font-weight:600; color:#ad0400;\">\345\215\203\345\217\244\346\261\237\345\261\261</span></p></body></html>", Q_NULLPTR));
+        ClassicGame->setText(QApplication::translate("SystemWindow", "\345\215\203\345\217\244\346\261\237\345\261\261", Q_NULLPTR));
+        BrawlGame->setText(QApplication::translate("SystemWindow", "\345\277\253\346\210\230\344\270\200\345\234\272", Q_NULLPTR));
+        freeLgends->setText(QApplication::translate("SystemWindow", "\346\262\231\347\233\230\347\202\271\345\205\265", Q_NULLPTR));
         Setings->setText(QApplication::translate("SystemWindow", "\350\256\276\347\275\256", Q_NULLPTR));
         Quit->setText(QApplication::translate("SystemWindow", "\351\200\200\345\207\272", Q_NULLPTR));
-        Version->setText(QApplication::translate("SystemWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">V 0.2.2</span></p></body></html>", Q_NULLPTR));
+        Version->setText(QApplication::translate("SystemWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">V 0.2.3</span></p></body></html>", Q_NULLPTR));
         PowerBy->setText(QApplication::translate("SystemWindow", "<html><head/><body><p align=\"right\"><span style=\" font-size:12pt; font-weight:600;\">PowerBy TimVan</span></p></body></html>", Q_NULLPTR));
     } // retranslateUi
 

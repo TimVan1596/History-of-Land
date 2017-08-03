@@ -27,7 +27,7 @@ bool Legend::attack(Legend &enemy) {
     if(hurt>0) {
         this->HP += hurt;
         this->ATK+=5;
-        this->DFS+=5;
+        this->DFS+=3;
         this->MP+=4;
 
 
@@ -43,11 +43,11 @@ bool Legend::attack(Legend &enemy) {
     }
 
     this->ATK+=1;
-    this->MP-=7;
+    this->MP-=5;
 
     enemy.ATK+=5;
     enemy.DFS+=1;
-    enemy.MP+=5;
+    enemy.MP+=6;
     return false;
     round_hurt = 0;
 }
