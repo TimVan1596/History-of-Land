@@ -25,35 +25,30 @@ Legend::Legend()
 
 bool Legend::attack(Legend &enemy) {
 
-    double sword = 1.2*this->ATK+0.83*this->MP+2;
-    this->round_hurt =Random(sword-2,sword+8)-enemy.DFS;
-    //cout<<"hurt = "<<hurt<<endl;
+    check(*this);
+    check(enemy);
+
+    double sword = this->ATK+0.33*this->MP+2;   //直接战斗力
+    this->round_hurt =Random(sword-2,sword+8)-enemy.DFS;    //考虑每次战斗力都不同，有上下浮动，去掉敌军的防御力
 
     if( this->round_hurt>0) {
         this->HP +=  this->round_hurt;
-        this->ATK+=5;
-        this->DFS+=3;
-        this->MP+=4;
-
-
         enemy.HP -=  this->round_hurt;
-        if(enemy.HP <= 0) {
-            enemy.isAlive = false;
-        }
-        enemy.ATK+=1;
-        enemy.DFS-=3;
-        enemy.MP-=5;
         return true;
     }
-
-    this->ATK+=1;
-    this->MP-=5;
-
-    enemy.ATK+=5;
-    enemy.DFS+=1;
-    enemy.MP+=6;
     this->round_hurt = 0;
     return false;
+}
+
+
+void Legend::check(Legend &legend)
+//检查英雄所有属性，确保属性不会小于0
+
+{
+    if(legend.HP  <= 0){legend.isAlive = false;}
+    if(legend.ATK  < 0){legend.ATK = 0;}
+    if(legend.DFS  < 0){legend.DFS = 0;}
+    if(legend.MP  < 0){legend.MP = 0;}
 }
 
 

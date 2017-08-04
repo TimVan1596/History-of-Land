@@ -12,7 +12,6 @@
         <file>images/icon/new.png</file>
         <file>images/icon/save-as.png</file>
         <file>images/icon/enemy.bmp</file>
-        <file>images/icon/me.BMP</file>
         <file>images/icon/ListAdd.png</file>
         <file>images/icon/ListChange.png</file>
         <file>images/icon/ListDelete.png</file>
@@ -21,5 +20,6 @@
         <file>images/winpage/胜利.png</file>
         <file>images/winpage/victory.png</file>
         <file>images/winpage/defeat.png</file>
+        <file>images/Game/ThinRedLine.png</file>
     </qresource>
 </RCC>

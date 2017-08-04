@@ -23,6 +23,7 @@
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -44,12 +45,18 @@ public:
     QAction *actionfind_F;
     QWidget *centralwidget;
     QLabel *cache;
-    QPushButton *pushButton;
-    QLabel *ProcessStatus;
     QTextEdit *History;
     QTextEdit *textEdit;
     QTableWidget *myTableWidget;
     QTableWidget *enemyTableWidget;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *ThinRedlLayout;
+    QPushButton *ThinRedBTN;
+    QLabel *ThinRedTips;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *DirectATKLayout;
+    QPushButton *DirectATKBTN;
+    QLabel *DirectATKTips;
     QMenuBar *menubar;
     QMenu *menu_help;
     QMenu *menu_menu;
@@ -125,21 +132,12 @@ public:
         cache = new QLabel(centralwidget);
         cache->setObjectName(QStringLiteral("cache"));
         cache->setGeometry(QRect(9, 380, 622, 16));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(280, 70, 131, 111));
-        pushButton->setIcon(icon4);
-        pushButton->setIconSize(QSize(64, 64));
-        pushButton->setFlat(true);
-        ProcessStatus = new QLabel(centralwidget);
-        ProcessStatus->setObjectName(QStringLiteral("ProcessStatus"));
-        ProcessStatus->setGeometry(QRect(310, 170, 81, 41));
         History = new QTextEdit(centralwidget);
         History->setObjectName(QStringLiteral("History"));
-        History->setGeometry(QRect(80, 320, 541, 131));
+        History->setGeometry(QRect(30, 310, 691, 131));
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(650, 370, 16, 16));
+        textEdit->setGeometry(QRect(720, 10, 20, 20));
         textEdit->setFrameShape(QFrame::NoFrame);
         textEdit->setFrameShadow(QFrame::Plain);
         myTableWidget = new QTableWidget(centralwidget);
@@ -180,6 +178,49 @@ public:
         enemyTableWidget->setVerticalHeaderItem(4, __qtablewidgetitem11);
         enemyTableWidget->setObjectName(QStringLiteral("enemyTableWidget"));
         enemyTableWidget->setGeometry(QRect(520, 30, 181, 261));
+        verticalLayoutWidget = new QWidget(centralwidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(240, 160, 81, 94));
+        ThinRedlLayout = new QVBoxLayout(verticalLayoutWidget);
+        ThinRedlLayout->setObjectName(QStringLiteral("ThinRedlLayout"));
+        ThinRedlLayout->setContentsMargins(0, 0, 0, 0);
+        ThinRedBTN = new QPushButton(verticalLayoutWidget);
+        ThinRedBTN->setObjectName(QStringLiteral("ThinRedBTN"));
+        QIcon icon11;
+        icon11.addFile(QStringLiteral(":/gpicon/images/Game/ThinRedLine.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ThinRedBTN->setIcon(icon11);
+        ThinRedBTN->setIconSize(QSize(64, 64));
+        ThinRedBTN->setFlat(true);
+
+        ThinRedlLayout->addWidget(ThinRedBTN);
+
+        ThinRedTips = new QLabel(verticalLayoutWidget);
+        ThinRedTips->setObjectName(QStringLiteral("ThinRedTips"));
+
+        ThinRedlLayout->addWidget(ThinRedTips);
+
+        verticalLayoutWidget_2 = new QWidget(centralwidget);
+        verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
+        verticalLayoutWidget_2->setGeometry(QRect(310, 10, 101, 95));
+        DirectATKLayout = new QVBoxLayout(verticalLayoutWidget_2);
+        DirectATKLayout->setObjectName(QStringLiteral("DirectATKLayout"));
+        DirectATKLayout->setContentsMargins(0, 0, 0, 0);
+        DirectATKBTN = new QPushButton(verticalLayoutWidget_2);
+        DirectATKBTN->setObjectName(QStringLiteral("DirectATKBTN"));
+        DirectATKBTN->setIcon(icon4);
+        DirectATKBTN->setIconSize(QSize(64, 64));
+        DirectATKBTN->setFlat(true);
+
+        DirectATKLayout->addWidget(DirectATKBTN);
+
+        DirectATKTips = new QLabel(verticalLayoutWidget_2);
+        DirectATKTips->setObjectName(QStringLiteral("DirectATKTips"));
+        DirectATKTips->setTextFormat(Qt::RichText);
+        DirectATKTips->setScaledContents(true);
+        DirectATKTips->setWordWrap(false);
+
+        DirectATKLayout->addWidget(DirectATKTips);
+
         GamePage->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GamePage);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -272,8 +313,6 @@ public:
         action_A_2->setText(QApplication::translate("GamePage", "\345\217\246\345\255\230\344\270\272(&A)", Q_NULLPTR));
         actionfind_F->setText(QApplication::translate("GamePage", "find(&F)", Q_NULLPTR));
         cache->setText(QString());
-        pushButton->setText(QString());
-        ProcessStatus->setText(QApplication::translate("GamePage", "\350\277\233\350\241\214\346\210\230\346\226\227", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem = myTableWidget->verticalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("GamePage", "\345\270\235\345\233\275\357\274\232", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem1 = myTableWidget->verticalHeaderItem(1);
@@ -294,6 +333,10 @@ public:
         ___qtablewidgetitem8->setText(QApplication::translate("GamePage", "\345\256\210\345\244\207\357\274\232", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem9 = enemyTableWidget->verticalHeaderItem(4);
         ___qtablewidgetitem9->setText(QApplication::translate("GamePage", "\345\233\275\346\260\221\345\271\270\347\246\217\345\272\246\357\274\232", Q_NULLPTR));
+        ThinRedBTN->setText(QString());
+        ThinRedTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" color:#ff5500;\">\347\273\206\347\273\206\347\232\204\347\272\242\347\272\277</span></p></body></html>", Q_NULLPTR));
+        DirectATKBTN->setText(QString());
+        DirectATKTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">\347\233\264\346\216\245\346\224\273\345\237\216</span></p></body></html>", Q_NULLPTR));
         menu_help->setTitle(QApplication::translate("GamePage", "\345\270\256\345\212\251(&H)", Q_NULLPTR));
         menu_menu->setTitle(QApplication::translate("GamePage", "\350\217\234\345\215\225(&M)", Q_NULLPTR));
         menu_record->setTitle(QApplication::translate("GamePage", "\350\256\260\345\275\225(&R)", Q_NULLPTR));

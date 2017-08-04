@@ -6,9 +6,8 @@
 #include <QTextStream>
 #include <QPainter>
 #include <QVBoxLayout>
+#include <QScrollBar>
 
-//#include "gameover.h"
-//#include "gamewin.h"
 #include "gamerecord.h"
 #include "GameEnd.h"
 
@@ -187,35 +186,6 @@ void Game::paintEvent(QPaintEvent *)
 }
 
 
-void Game::on_pushButton_clicked()
-{
-
-
-    QString c = QString::number(++round_count, 10);
-    QString cache = QString("第 %1 轮\n").arg(c);
-    ui->History->insertPlainText(cache);
-    if(my.attack(enemy)){
-        ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
-    }
-    else {
-        ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
-    }
-
-    if(enemy.attack(my)){
-        ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
-    }
-    else {
-        ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
-    }
-
-    sumHurt +=my.round_hurt;
-    ui->History->insertPlainText("总伤害为 :"+QString::number(sumHurt,10)+"\n");
-
-    updateTableWidget();
-    if(my.isAlive == false ||enemy.isAlive ==false ){
-        endGame();
-    }
-}
 
 void Game::receiveEndGame(bool end)
 {
@@ -237,7 +207,7 @@ void Game::receiveLegendData(QList<QString> receiveData,QList<QString> enemyData
 {
 
     my.initiate(receiveData.at(0),receiveData.at(1).toInt(), receiveData.at(2).toInt(),receiveData.at(3).toInt(),receiveData.at(4).toInt());
-    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+5),(enemyData.at(2).toInt()+5),(enemyData.at(3).toInt()+5),(enemyData.at(4).toInt()+5));
+    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+10),(enemyData.at(2).toInt()+10),(enemyData.at(3).toInt()+10),(enemyData.at(4).toInt()+10));
     //Legend类的my和enemy接收从外部发过来的数据
 
     myName = new QTableWidgetItem(my.name);
@@ -285,7 +255,9 @@ void Game::updateTableWidget(){
 
 }
 
-void Game::endGame(){
+void Game::endGame()
+//结束游戏之后的记录
+{
     GameEnd *gg = new GameEnd(this);
     gg->initiate(my.isAlive);
     gg->exec();
@@ -296,4 +268,100 @@ void Game::endGame(){
 
     close();
 }
+
+void Game::MilitaryCourt(Legend &winner,Legend &loser)
+//军事法庭，用于处理每回合双方交战之后的结果，对两方属性进行划分
+{
+
+
+    winner.ATK += 5;
+    loser.ATK  += 1;
+
+    winner.DFS += 3;
+    loser.DFS  -= 1;
+
+    winner.MP += 10;
+    loser.MP  -= 1;
+
+    if(loser.HP< 0)  loser.HP = 0;
+
+    if(winner.ATK > winner.HP)  winner.ATK = winner.HP;
+    if(loser.ATK > loser.HP)  loser.ATK = loser.HP;
+}
+
+
+void Game::on_DirectATKBTN_clicked()
+{
+    int Origin_MYHP =my.HP;//保存开战前的原领土面积
+
+    tipsBeforeGame();
+    if(my.attack(enemy)){
+        ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
+    }
+
+    if(enemy.attack(my)){
+        ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
+    }
+
+
+    sumHurt +=my.round_hurt;
+
+    endBattle(Origin_MYHP);
+}
+
+void Game::on_ThinRedBTN_clicked()
+{
+    int Origin_MYHP =my.HP;//保存开战前的原领土面积
+    tipsBeforeGame();
+
+    sumHurt +=my.round_hurt;
+    endBattle(Origin_MYHP);
+}
+
+void Game::endBattle(int Origin_MYHP)
+//交战之后的处理阶段函数
+{
+    ui->History->insertPlainText(QString("本回合"));
+    if(my.HP - Origin_MYHP > 0){
+        ui->History->insertPlainText(QString("我军大胜！共占领地方%1座城池\n").arg(my.HP - Origin_MYHP));
+        MilitaryCourt(my,enemy);
+    }
+    else if(my.HP - Origin_MYHP == 0){
+        ui->History->insertPlainText(QString("贼军和我军不相上下\n"));
+    }
+    else{
+        ui->History->insertPlainText(QString("天不助我！我方城池失陷%1座\n").arg(Origin_MYHP-my.HP));
+        MilitaryCourt(enemy,my);
+    }
+    updateTableWidget();
+    QScrollBar *scrollbar = ui->History->verticalScrollBar();
+    if (scrollbar)     {
+        scrollbar->setSliderPosition(scrollbar->maximum());
+    }
+
+
+    if(my.isAlive == false ||enemy.isAlive ==false ){
+        endGame();
+    }
+
+}
+
+void Game::tipsBeforeGame()
+//游戏开始前的提示语句
+{
+    QString c = QString::number(++round_count, 10);
+    QString cache = QString("\n\n第 %1 轮\n").arg(c);
+    ui->History->insertPlainText(cache);
+
+}
+
+
+
+
 

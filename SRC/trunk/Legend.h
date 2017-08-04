@@ -22,6 +22,9 @@ public:
 
 protected:
     double Random(double start, double end);
+private:
+    void check(Legend &);
+    //检查英雄所有属性，确保属性不会小于0
 };
 
 #endif // LEGEND_H

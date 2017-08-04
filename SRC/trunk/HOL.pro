@@ -27,7 +27,6 @@ SOURCES += main.cpp\
     logindlg.cpp \
     settingpage.cpp \
     set_customkingdom.cpp \
-    gameover.cpp \
     gamerecord.cpp \
     SystemWindow.cpp \
     Game.cpp \
@@ -41,7 +40,6 @@ HEADERS  += \
     logindlg.h \
     settingpage.h \
     set_customkingdom.h \
-    gameover.h \
     gamerecord.h \
     SystemWindow.h \
     Game.h \
