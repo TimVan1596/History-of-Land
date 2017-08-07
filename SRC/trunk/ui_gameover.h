@@ -24,24 +24,45 @@ class Ui_gameover
 {
 public:
     QPushButton *pushButton;
-    QLabel *label;
+    QLabel *winLabel;
+    QLabel *defeatLabel;
 
     void setupUi(QDialog *gameover)
     {
         if (gameover->objectName().isEmpty())
             gameover->setObjectName(QStringLiteral("gameover"));
-        gameover->resize(399, 350);
+        gameover->resize(413, 312);
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        font.setPointSize(12);
+        gameover->setFont(font);
         pushButton = new QPushButton(gameover);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(50, 270, 281, 71));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/gpicon/images/winpage/\347\273\247\347\273\255\346\270\270\346\210\217.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon);
+        pushButton->setGeometry(QRect(60, 230, 281, 71));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font1.setPointSize(11);
+        font1.setBold(true);
+        font1.setWeight(75);
+        pushButton->setFont(font1);
+        pushButton->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color: rgb(66, 133, 244); \n"
+"border-radius: 8px; \n"
+"color:rgb(255, 255, 255); \n"
+"} \n"
+"\n"
+"QPushButton:hover \n"
+"{ \n"
+"background-color:rgb(42,86,198); \n"
+"}"));
         pushButton->setIconSize(QSize(155, 50));
         pushButton->setFlat(true);
-        label = new QLabel(gameover);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(0, 0, 391, 271));
+        winLabel = new QLabel(gameover);
+        winLabel->setObjectName(QStringLiteral("winLabel"));
+        winLabel->setGeometry(QRect(0, -40, 401, 291));
+        defeatLabel = new QLabel(gameover);
+        defeatLabel->setObjectName(QStringLiteral("defeatLabel"));
+        defeatLabel->setGeometry(QRect(-40, -60, 461, 281));
 
         retranslateUi(gameover);
 
@@ -51,8 +72,9 @@ public:
     void retranslateUi(QDialog *gameover)
     {
         gameover->setWindowTitle(QApplication::translate("gameover", "Dialog", Q_NULLPTR));
-        pushButton->setText(QString());
-        label->setText(QApplication::translate("gameover", "<html><head/><body><p><img src=\":/gpicon/images/winpage/\345\244\261\350\264\245.png\"/></p></body></html>", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("gameover", "\347\273\247  \347\273\255  \346\270\270  \346\210\217", Q_NULLPTR));
+        winLabel->setText(QApplication::translate("gameover", "<html><head/><body><p><img src=\":/gpicon/images/winpage/victory.png\"/></p></body></html>", Q_NULLPTR));
+        defeatLabel->setText(QApplication::translate("gameover", "<html><head/><body><p><img src=\":/gpicon/images/winpage/defeat.png\"/></p></body></html>", Q_NULLPTR));
     } // retranslateUi
 
 };

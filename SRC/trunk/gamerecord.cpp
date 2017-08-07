@@ -27,14 +27,16 @@ void GameRecord::initiate(bool isWin,int SumRound,int SumATK ,int SumHurt)
     ui->SumATKEdit->setReadOnly(true);  //编辑框只读
 
 
-    if(!isWin){
+    if(isWin){
         ui->OverPic->setVisible(false);
     }
     else{
         ui->WinPic->setVisible(false);
     }
 
-    ui->RounCountdEdit->setText(QString::number(SumRound,10));
+    ui->RoundCNTEdit->setText(QString::number(SumRound,10));
+    ui->SumATKEdit->setText(QString::number(SumATK,10));
     ui->SumHurtEdit->setText(QString::number(SumHurt,10));
+
 
 }

@@ -16,7 +16,7 @@ public:
     ~GameRecord();
 
 
-    void initiate(int round_count, bool isWin);
+    void initiate(bool isWin, int SumRound, int SumATK, int SumHurt);
 signals:
 
 private slots:

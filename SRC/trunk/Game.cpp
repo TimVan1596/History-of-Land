@@ -33,6 +33,7 @@ Game::Game(QWidget *parent) :
     //connect(btn, QPushButton::clicked, this, GamePage::showFindText());
     ui->History->setReadOnly(true);
     sumHurt = 0;
+    sumATK = 0;
     round_count = 0;
     ui->textEdit->setVisible(false);
 
@@ -188,14 +189,6 @@ void Game::paintEvent(QPaintEvent *)
 
 
 
-void Game::receiveEndGame(bool end)
-{
-    emit sendRecordData(round_count,end);
-    GameRecord *record = new GameRecord(this);
-    record->win = end;
-    record->round_count = this->round_count;
-    record->show();
-}
 
 void Game::receiveclose(bool x)
 {
@@ -207,8 +200,8 @@ void Game::receiveclose(bool x)
 void Game::receiveLegendData(QList<QString> receiveData,QList<QString> enemyData)
 {
 
-    my.initiate(receiveData.at(0),receiveData.at(1).toInt(), receiveData.at(2).toInt(),receiveData.at(3).toInt(),receiveData.at(4).toInt());
-    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()+10),(enemyData.at(2).toInt()+10),(enemyData.at(3).toInt()+10),(enemyData.at(4).toInt()+10));
+    my.initiate(receiveData.at(0),receiveData.at(1).toInt(), receiveData.at(2).toInt(),receiveData.at(3).toInt(),receiveData.at(4).toInt()+5);
+    enemy.initiate(enemyData.at(0),(enemyData.at(1).toInt()),(enemyData.at(2).toInt()+6),(enemyData.at(3).toInt()+6),(enemyData.at(4).toInt()));
     //Legend类的my和enemy接收从外部发过来的数据
 
     myName = new QTableWidgetItem(my.name);
@@ -264,7 +257,13 @@ void Game::endGame()
     gg->exec();
 
     GameRecord *record = new GameRecord(this);
-    record->initiate(round_count,my.isAlive);
+    record->initiate(my.isAlive,round_count,sumATK,sumHurt);
+    /*
+    bool isWin; //是否胜利
+    int SumRound; //总回合数
+    int SumATK;    //总造成伤害
+    int SumHurt;    //总承受伤害
+*/
     record->show();
 
     close();
@@ -293,6 +292,7 @@ void Game::MilitaryCourt(Legend &winner,Legend &loser)
 
 void Game::on_DirectATKBTN_clicked()
 {
+    //普通攻击
     int Origin_MYHP =my.HP;//保存开战前的原领土面积
 
     tipsBeforeGame();
@@ -302,6 +302,7 @@ void Game::on_DirectATKBTN_clicked()
     else {
         ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
     }
+    sumATK +=my.round_hurt;
 
     if(enemy.attack(my)){
         ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
@@ -309,17 +310,14 @@ void Game::on_DirectATKBTN_clicked()
     else {
         ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
     }
-
-
-    sumHurt +=my.round_hurt;
-
+    sumHurt += enemy.round_hurt;
     endBattle(Origin_MYHP);
 }
 
 void Game::on_ThinRedBTN_clicked()
 {
-    const int THINREDMP = 15;
-    const int THINREDHP = 30;
+    const int THINREDMP = 15;//消耗的民心值
+    const int THINREDHP = 30;//增长的领土面积
 
     if(my.MP < THINREDMP){
         ui->History->insertPlainText(QString("我国人民的幸福度小于%1，请重新选择\n").arg(THINREDMP));
@@ -343,6 +341,7 @@ void Game::on_ThinRedBTN_clicked()
     else {
         ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
     }
+    sumATK +=my.round_hurt;
 
     if(enemy.attack(my)){
         ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
@@ -351,8 +350,7 @@ void Game::on_ThinRedBTN_clicked()
         ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
     }
 
-
-    sumHurt +=my.round_hurt;
+    sumHurt +=enemy.round_hurt;
     endBattle(Origin_MYHP);
 }
 
@@ -421,7 +419,7 @@ void Game::on_ChiBiBTN_clicked()
     else {
         ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
     }
-    sumHurt +=my.round_hurt;
+    sumATK +=my.round_hurt;
 
     if(my.attack(enemy)){
         ui->History->insertPlainText(QString("盟军英勇！助我军攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
@@ -429,6 +427,7 @@ void Game::on_ChiBiBTN_clicked()
     else {
         ui->History->insertPlainText("盟军战败，天不助我！\n");
     }
+    sumATK +=my.round_hurt;
 
     if(enemy.attack(my)){
         ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
@@ -438,7 +437,7 @@ void Game::on_ChiBiBTN_clicked()
     }
 
 
-    sumHurt +=my.round_hurt;
+    sumHurt +=enemy.round_hurt;
     endBattle(Origin_MYHP);
 
 }
@@ -468,9 +467,11 @@ void Game::on_WinterRussiaBTN_clicked()
         else {
             ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
         }
-        ui->History->insertPlainText("敌军本回合因大雪封城，无法出击\n");
 
-        sumHurt +=my.round_hurt;
+        sumATK +=my.round_hurt;
+
+        ui->History->insertPlainText("敌军本回合因大雪封城，无法出击\n");
+        sumHurt +=0;
         endBattle(Origin_MYHP);
     }
 

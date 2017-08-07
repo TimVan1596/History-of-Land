@@ -53,8 +53,6 @@ private slots:
 
     void on_actionfind_F_triggered();
 
-
-    void receiveEndGame(bool end);
     void receiveclose(bool end);
 
     void receiveLegendData(QList<QString>, QList<QString> );
@@ -95,6 +93,7 @@ private:
     void endGame();
     //当游戏结束后进入
     int sumHurt; // 保存承受敌方的总攻击力
+    int sumATK; // 保存对敌方造成的总攻击力
     void MilitaryCourt(Legend &winner, Legend &loser);
     //军事法庭，用于处理每回合双方交战之后的结果，对两方属性进行划分
     void endBattle(int Origin_MYHP);
