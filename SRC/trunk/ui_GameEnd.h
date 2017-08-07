@@ -58,7 +58,7 @@ public:
         winLabel->setGeometry(QRect(40, 20, 401, 291));
         defeatLabel = new QLabel(GameEnd);
         defeatLabel->setObjectName(QStringLiteral("defeatLabel"));
-        defeatLabel->setGeometry(QRect(0, 0, 461, 281));
+        defeatLabel->setGeometry(QRect(-20, -10, 481, 281));
 
         retranslateUi(GameEnd);
 
