@@ -19,17 +19,20 @@ void GameRecord::on_accept_clicked()
     close();
 }
 
-void GameRecord::initiate(int round_count ,bool isWin)
+void GameRecord::initiate(bool isWin,int SumRound ,int SumHurt)
 {
-    this->round_count = round_count;
-    this->win = win;
 
-    ui->RounCountdEdit->setReadOnly(true);
-    ui->RounCountdEdit->setText(QString::number(this->round_count,10));
-    if(!win){
+    ui->RoundCNTEdit->setReadOnly(true);  //编辑框只读
+    ui->SumHurtEdit->setReadOnly(true);  //编辑框只读
+
+    if(!isWin){
         ui->OverPic->setVisible(false);
     }
     else{
         ui->WinPic->setVisible(false);
     }
+
+    ui->RounCountdEdit->setText(QString::number(SumRound,10));
+    ui->SumHurtEdit->setText(QString::number(SumHurt,10));
+
 }

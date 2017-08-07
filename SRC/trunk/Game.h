@@ -63,6 +63,10 @@ private slots:
 
     void on_ThinRedBTN_clicked();
 
+    void on_ChiBiBTN_clicked();
+
+    void on_WinterRussiaBTN_clicked();
+
 private:
     Ui::GamePage *ui;
     bool isUntitled;

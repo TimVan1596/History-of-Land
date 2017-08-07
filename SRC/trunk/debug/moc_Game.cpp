@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Game_t {
-    QByteArrayData data[17];
-    char stringdata0[286];
+    QByteArrayData data[19];
+    char stringdata0[333];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,7 +48,9 @@ QT_MOC_LITERAL(12, 194, 12), // "receiveclose"
 QT_MOC_LITERAL(13, 207, 17), // "receiveLegendData"
 QT_MOC_LITERAL(14, 225, 14), // "QList<QString>"
 QT_MOC_LITERAL(15, 240, 23), // "on_DirectATKBTN_clicked"
-QT_MOC_LITERAL(16, 264, 21) // "on_ThinRedBTN_clicked"
+QT_MOC_LITERAL(16, 264, 21), // "on_ThinRedBTN_clicked"
+QT_MOC_LITERAL(17, 286, 19), // "on_ChiBiBTN_clicked"
+QT_MOC_LITERAL(18, 306, 26) // "on_WinterRussiaBTN_clicked"
 
     },
     "Game\0sendRecordData\0\0on_action_N_triggered\0"
@@ -57,7 +59,8 @@ QT_MOC_LITERAL(16, 264, 21) // "on_ThinRedBTN_clicked"
     "showFindText\0on_actionfind_F_triggered\0"
     "receiveEndGame\0end\0receiveclose\0"
     "receiveLegendData\0QList<QString>\0"
-    "on_DirectATKBTN_clicked\0on_ThinRedBTN_clicked"
+    "on_DirectATKBTN_clicked\0on_ThinRedBTN_clicked\0"
+    "on_ChiBiBTN_clicked\0on_WinterRussiaBTN_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,7 +70,7 @@ static const uint qt_meta_data_Game[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,21 +78,23 @@ static const uint qt_meta_data_Game[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   79,    2, 0x06 /* Public */,
+       1,    2,   89,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   84,    2, 0x08 /* Private */,
-       4,    0,   85,    2, 0x08 /* Private */,
-       5,    0,   86,    2, 0x08 /* Private */,
-       6,    0,   87,    2, 0x08 /* Private */,
-       7,    0,   88,    2, 0x08 /* Private */,
-       8,    0,   89,    2, 0x08 /* Private */,
-       9,    0,   90,    2, 0x08 /* Private */,
-      10,    1,   91,    2, 0x08 /* Private */,
-      12,    1,   94,    2, 0x08 /* Private */,
-      13,    2,   97,    2, 0x08 /* Private */,
-      15,    0,  102,    2, 0x08 /* Private */,
-      16,    0,  103,    2, 0x08 /* Private */,
+       3,    0,   94,    2, 0x08 /* Private */,
+       4,    0,   95,    2, 0x08 /* Private */,
+       5,    0,   96,    2, 0x08 /* Private */,
+       6,    0,   97,    2, 0x08 /* Private */,
+       7,    0,   98,    2, 0x08 /* Private */,
+       8,    0,   99,    2, 0x08 /* Private */,
+       9,    0,  100,    2, 0x08 /* Private */,
+      10,    1,  101,    2, 0x08 /* Private */,
+      12,    1,  104,    2, 0x08 /* Private */,
+      13,    2,  107,    2, 0x08 /* Private */,
+      15,    0,  112,    2, 0x08 /* Private */,
+      16,    0,  113,    2, 0x08 /* Private */,
+      17,    0,  114,    2, 0x08 /* Private */,
+      18,    0,  115,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Bool,    2,    2,
@@ -105,6 +110,8 @@ static const uint qt_meta_data_Game[] = {
     QMetaType::Void, QMetaType::Bool,   11,
     QMetaType::Void, QMetaType::Bool,   11,
     QMetaType::Void, 0x80000000 | 14, 0x80000000 | 14,    2,    2,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -130,6 +137,8 @@ void Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 10: _t->receiveLegendData((*reinterpret_cast< QList<QString>(*)>(_a[1])),(*reinterpret_cast< QList<QString>(*)>(_a[2]))); break;
         case 11: _t->on_DirectATKBTN_clicked(); break;
         case 12: _t->on_ThinRedBTN_clicked(); break;
+        case 13: _t->on_ChiBiBTN_clicked(); break;
+        case 14: _t->on_WinterRussiaBTN_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -182,13 +191,13 @@ int Game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 15;
     }
     return _id;
 }

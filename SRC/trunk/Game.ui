@@ -56,8 +56,8 @@
    <widget class="QTableWidget" name="myTableWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
+      <x>10</x>
+      <y>20</y>
       <width>181</width>
       <height>261</height>
      </rect>
@@ -96,7 +96,7 @@
    <widget class="QTableWidget" name="enemyTableWidget">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>560</x>
       <y>30</y>
       <width>181</width>
       <height>261</height>
@@ -133,50 +133,11 @@
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>160</y>
-      <width>81</width>
-      <height>94</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="ThinRedlLayout">
-     <item>
-      <widget class="QPushButton" name="ThinRedBTN">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="gamepageicon.qrc">
-         <normaloff>:/gpicon/images/Game/ThinRedLine.png</normaloff>:/gpicon/images/Game/ThinRedLine.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>64</width>
-         <height>64</height>
-        </size>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="ThinRedTips">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;细细的红线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>10</y>
+      <x>320</x>
+      <y>40</y>
       <width>101</width>
       <height>95</height>
      </rect>
@@ -217,6 +178,111 @@
         <bool>false</bool>
        </property>
       </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>170</y>
+      <width>371</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="SkillsHLayout">
+     <item>
+      <layout class="QVBoxLayout" name="ThinRedlLayout">
+       <item>
+        <widget class="QPushButton" name="ThinRedBTN">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="gamepageicon.qrc">
+           <normaloff>:/gpicon/images/Game/RedLine.png</normaloff>:/gpicon/images/Game/RedLine.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ThinRedTips">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;细细的红线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="ChiBiLayout">
+       <item>
+        <widget class="QPushButton" name="ChiBiBTN">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>images/Game/ChiBi.png</normaloff>images/Game/ChiBi.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ChiBiTips">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;火烧赤壁&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="WinterRussialLayout">
+       <item>
+        <widget class="QPushButton" name="WinterRussiaBTN">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="gamepageicon.qrc">
+           <normaloff>:/gpicon/images/Game/WinterRussia.png</normaloff>:/gpicon/images/Game/WinterRussia.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="WinterRussiaTips">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;俄罗斯之冬&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>

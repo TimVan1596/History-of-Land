@@ -71,9 +71,9 @@ background-color:rgb(42,86,198);
   <widget class="QLabel" name="defeatLabel">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>461</width>
+     <x>-20</x>
+     <y>-10</y>
+     <width>481</width>
      <height>281</height>
     </rect>
    </property>

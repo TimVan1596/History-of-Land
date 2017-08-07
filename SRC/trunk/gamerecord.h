@@ -14,8 +14,7 @@ class GameRecord : public QDialog
 public:
     explicit GameRecord(QWidget *parent = 0);
     ~GameRecord();
-    bool win;
-    int round_count;
+
 
     void initiate(int round_count, bool isWin);
 signals:
@@ -26,6 +25,10 @@ private slots:
 
 private:
     Ui::GameRecord *ui;
+    bool isWin; //是否胜利
+    int SumRound; //总回合数
+    int SumATK;    //总造成伤害
+    int SumHurt;    //总承受伤害
 };
 
 #endif // GAMERECORD_H

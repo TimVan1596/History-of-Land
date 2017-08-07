@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -49,14 +50,21 @@ public:
     QTextEdit *textEdit;
     QTableWidget *myTableWidget;
     QTableWidget *enemyTableWidget;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *ThinRedlLayout;
-    QPushButton *ThinRedBTN;
-    QLabel *ThinRedTips;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *DirectATKLayout;
     QPushButton *DirectATKBTN;
     QLabel *DirectATKTips;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *SkillsHLayout;
+    QVBoxLayout *ThinRedlLayout;
+    QPushButton *ThinRedBTN;
+    QLabel *ThinRedTips;
+    QVBoxLayout *ChiBiLayout;
+    QPushButton *ChiBiBTN;
+    QLabel *ChiBiTips;
+    QVBoxLayout *WinterRussialLayout;
+    QPushButton *WinterRussiaBTN;
+    QLabel *WinterRussiaTips;
     QMenuBar *menubar;
     QMenu *menu_help;
     QMenu *menu_menu;
@@ -158,7 +166,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
         myTableWidget->setVerticalHeaderItem(4, __qtablewidgetitem5);
         myTableWidget->setObjectName(QStringLiteral("myTableWidget"));
-        myTableWidget->setGeometry(QRect(40, 30, 181, 261));
+        myTableWidget->setGeometry(QRect(10, 20, 181, 261));
         enemyTableWidget = new QTableWidget(centralwidget);
         if (enemyTableWidget->columnCount() < 1)
             enemyTableWidget->setColumnCount(1);
@@ -177,31 +185,10 @@ public:
         QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
         enemyTableWidget->setVerticalHeaderItem(4, __qtablewidgetitem11);
         enemyTableWidget->setObjectName(QStringLiteral("enemyTableWidget"));
-        enemyTableWidget->setGeometry(QRect(520, 30, 181, 261));
-        verticalLayoutWidget = new QWidget(centralwidget);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(240, 160, 81, 94));
-        ThinRedlLayout = new QVBoxLayout(verticalLayoutWidget);
-        ThinRedlLayout->setObjectName(QStringLiteral("ThinRedlLayout"));
-        ThinRedlLayout->setContentsMargins(0, 0, 0, 0);
-        ThinRedBTN = new QPushButton(verticalLayoutWidget);
-        ThinRedBTN->setObjectName(QStringLiteral("ThinRedBTN"));
-        QIcon icon11;
-        icon11.addFile(QStringLiteral(":/gpicon/images/Game/ThinRedLine.png"), QSize(), QIcon::Normal, QIcon::Off);
-        ThinRedBTN->setIcon(icon11);
-        ThinRedBTN->setIconSize(QSize(64, 64));
-        ThinRedBTN->setFlat(true);
-
-        ThinRedlLayout->addWidget(ThinRedBTN);
-
-        ThinRedTips = new QLabel(verticalLayoutWidget);
-        ThinRedTips->setObjectName(QStringLiteral("ThinRedTips"));
-
-        ThinRedlLayout->addWidget(ThinRedTips);
-
+        enemyTableWidget->setGeometry(QRect(560, 30, 181, 261));
         verticalLayoutWidget_2 = new QWidget(centralwidget);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(310, 10, 101, 95));
+        verticalLayoutWidget_2->setGeometry(QRect(320, 40, 101, 95));
         DirectATKLayout = new QVBoxLayout(verticalLayoutWidget_2);
         DirectATKLayout->setObjectName(QStringLiteral("DirectATKLayout"));
         DirectATKLayout->setContentsMargins(0, 0, 0, 0);
@@ -220,6 +207,72 @@ public:
         DirectATKTips->setWordWrap(false);
 
         DirectATKLayout->addWidget(DirectATKTips);
+
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(190, 170, 371, 101));
+        SkillsHLayout = new QHBoxLayout(horizontalLayoutWidget);
+        SkillsHLayout->setObjectName(QStringLiteral("SkillsHLayout"));
+        SkillsHLayout->setContentsMargins(0, 0, 0, 0);
+        ThinRedlLayout = new QVBoxLayout();
+        ThinRedlLayout->setObjectName(QStringLiteral("ThinRedlLayout"));
+        ThinRedBTN = new QPushButton(horizontalLayoutWidget);
+        ThinRedBTN->setObjectName(QStringLiteral("ThinRedBTN"));
+        QIcon icon11;
+        icon11.addFile(QStringLiteral(":/gpicon/images/Game/RedLine.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ThinRedBTN->setIcon(icon11);
+        ThinRedBTN->setIconSize(QSize(64, 64));
+        ThinRedBTN->setFlat(true);
+
+        ThinRedlLayout->addWidget(ThinRedBTN);
+
+        ThinRedTips = new QLabel(horizontalLayoutWidget);
+        ThinRedTips->setObjectName(QStringLiteral("ThinRedTips"));
+
+        ThinRedlLayout->addWidget(ThinRedTips);
+
+
+        SkillsHLayout->addLayout(ThinRedlLayout);
+
+        ChiBiLayout = new QVBoxLayout();
+        ChiBiLayout->setObjectName(QStringLiteral("ChiBiLayout"));
+        ChiBiBTN = new QPushButton(horizontalLayoutWidget);
+        ChiBiBTN->setObjectName(QStringLiteral("ChiBiBTN"));
+        QIcon icon12;
+        icon12.addFile(QStringLiteral("images/Game/ChiBi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ChiBiBTN->setIcon(icon12);
+        ChiBiBTN->setIconSize(QSize(64, 64));
+        ChiBiBTN->setFlat(true);
+
+        ChiBiLayout->addWidget(ChiBiBTN);
+
+        ChiBiTips = new QLabel(horizontalLayoutWidget);
+        ChiBiTips->setObjectName(QStringLiteral("ChiBiTips"));
+
+        ChiBiLayout->addWidget(ChiBiTips);
+
+
+        SkillsHLayout->addLayout(ChiBiLayout);
+
+        WinterRussialLayout = new QVBoxLayout();
+        WinterRussialLayout->setObjectName(QStringLiteral("WinterRussialLayout"));
+        WinterRussiaBTN = new QPushButton(horizontalLayoutWidget);
+        WinterRussiaBTN->setObjectName(QStringLiteral("WinterRussiaBTN"));
+        QIcon icon13;
+        icon13.addFile(QStringLiteral(":/gpicon/images/Game/WinterRussia.png"), QSize(), QIcon::Normal, QIcon::Off);
+        WinterRussiaBTN->setIcon(icon13);
+        WinterRussiaBTN->setIconSize(QSize(64, 64));
+        WinterRussiaBTN->setFlat(true);
+
+        WinterRussialLayout->addWidget(WinterRussiaBTN);
+
+        WinterRussiaTips = new QLabel(horizontalLayoutWidget);
+        WinterRussiaTips->setObjectName(QStringLiteral("WinterRussiaTips"));
+
+        WinterRussialLayout->addWidget(WinterRussiaTips);
+
+
+        SkillsHLayout->addLayout(WinterRussialLayout);
 
         GamePage->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GamePage);
@@ -333,10 +386,14 @@ public:
         ___qtablewidgetitem8->setText(QApplication::translate("GamePage", "\345\256\210\345\244\207\357\274\232", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem9 = enemyTableWidget->verticalHeaderItem(4);
         ___qtablewidgetitem9->setText(QApplication::translate("GamePage", "\345\233\275\346\260\221\345\271\270\347\246\217\345\272\246\357\274\232", Q_NULLPTR));
-        ThinRedBTN->setText(QString());
-        ThinRedTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" color:#ff5500;\">\347\273\206\347\273\206\347\232\204\347\272\242\347\272\277</span></p></body></html>", Q_NULLPTR));
         DirectATKBTN->setText(QString());
         DirectATKTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">\347\233\264\346\216\245\346\224\273\345\237\216</span></p></body></html>", Q_NULLPTR));
+        ThinRedBTN->setText(QString());
+        ThinRedTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" color:#ff5500;\">\347\273\206\347\273\206\347\232\204\347\272\242\347\272\277</span></p></body></html>", Q_NULLPTR));
+        ChiBiBTN->setText(QString());
+        ChiBiTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" color:#ff5500;\">\347\201\253\347\203\247\350\265\244\345\243\201</span></p></body></html>", Q_NULLPTR));
+        WinterRussiaBTN->setText(QString());
+        WinterRussiaTips->setText(QApplication::translate("GamePage", "<html><head/><body><p align=\"center\"><span style=\" color:#ff5500;\">\344\277\204\347\275\227\346\226\257\344\271\213\345\206\254</span></p></body></html>", Q_NULLPTR));
         menu_help->setTitle(QApplication::translate("GamePage", "\345\270\256\345\212\251(&H)", Q_NULLPTR));
         menu_menu->setTitle(QApplication::translate("GamePage", "\350\217\234\345\215\225(&M)", Q_NULLPTR));
         menu_record->setTitle(QApplication::translate("GamePage", "\350\256\260\345\275\225(&R)", Q_NULLPTR));

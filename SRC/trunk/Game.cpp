@@ -34,6 +34,7 @@ Game::Game(QWidget *parent) :
     ui->History->setReadOnly(true);
     sumHurt = 0;
     round_count = 0;
+    ui->textEdit->setVisible(false);
 
 }
 
@@ -317,8 +318,39 @@ void Game::on_DirectATKBTN_clicked()
 
 void Game::on_ThinRedBTN_clicked()
 {
+    const int THINREDMP = 15;
+    const int THINREDHP = 30;
+
+    if(my.MP < THINREDMP){
+        ui->History->insertPlainText(QString("我国人民的幸福度小于%1，请重新选择\n").arg(THINREDMP));
+        return;
+    }
+
     int Origin_MYHP =my.HP;//保存开战前的原领土面积
     tipsBeforeGame();
+
+    ui->History->insertPlainText(QString("我国使用“细细的红线”消耗了%1幸福度\n").arg(THINREDMP));
+    ui->History->insertPlainText("抢夺了敌方城池"+QString("%1").arg(THINREDHP)+"座\n");
+
+    my.HP += THINREDHP;
+    my.MP -= THINREDMP;
+    enemy.HP -= THINREDHP;
+
+
+    if(my.attack(enemy)){
+        ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
+    }
+
+    if(enemy.attack(my)){
+        ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
+    }
+
 
     sumHurt +=my.round_hurt;
     endBattle(Origin_MYHP);
@@ -327,7 +359,7 @@ void Game::on_ThinRedBTN_clicked()
 void Game::endBattle(int Origin_MYHP)
 //交战之后的处理阶段函数
 {
-    ui->History->insertPlainText(QString("本回合"));
+    ui->History->insertPlainText(QString("本回合 , "));
     if(my.HP - Origin_MYHP > 0){
         ui->History->insertPlainText(QString("我军大胜！共占领地方%1座城池\n").arg(my.HP - Origin_MYHP));
         MilitaryCourt(my,enemy);
@@ -363,5 +395,84 @@ void Game::tipsBeforeGame()
 
 
 
+void Game::on_ChiBiBTN_clicked()
+{
+    const int ChiBiMP = 20;
+    const int ChiBiATK = 5;
 
 
+    if(my.MP < ChiBiMP){
+        ui->History->insertPlainText(QString("我国人民的幸福度小于%1，请重新选择\n").arg(ChiBiMP));
+        return;
+    }
+
+    int Origin_MYHP =my.HP;//保存开战前的原领土面积
+    tipsBeforeGame();
+
+    ui->History->insertPlainText(QString("我国使用“火烧赤壁”消耗了%1幸福度\n").arg(ChiBiMP));
+    ui->History->insertPlainText("将召唤盟军共同伐贼，同时我们军将增加兵力");
+
+    my.MP-=ChiBiMP;
+    my.ATK +=ChiBiATK;
+
+    if(my.attack(enemy)){
+        ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
+    }
+    sumHurt +=my.round_hurt;
+
+    if(my.attack(enemy)){
+        ui->History->insertPlainText(QString("盟军英勇！助我军攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("盟军战败，天不助我！\n");
+    }
+
+    if(enemy.attack(my)){
+        ui->History->insertPlainText(QString("敌军夺取我方 %1 座城池！\n").arg(QString::number(enemy.round_hurt,10)));
+    }
+    else {
+        ui->History->insertPlainText("吾军城池坚不可摧，敌军已闻风丧胆而去\n");
+    }
+
+
+    sumHurt +=my.round_hurt;
+    endBattle(Origin_MYHP);
+
+}
+
+void Game::on_WinterRussiaBTN_clicked()
+{
+    const int WinterRussiaMP = 20;
+    int WinterRussiaROUND = 2; //WinterRussiaROUND 个回合内敌军无法进攻
+
+    if(my.MP < WinterRussiaMP){
+        ui->History->insertPlainText(QString("我国人民的幸福度小于%1，请重新选择\n").arg(WinterRussiaMP));
+        return;
+    }
+
+    ui->History->insertPlainText(QString("我国使用“俄罗斯之冬”消耗了%1幸福度\n").arg(WinterRussiaMP));
+    ui->History->insertPlainText("敌军将在两个回合内无法进攻\n");
+
+    while(WinterRussiaROUND--){
+        int Origin_MYHP =my.HP;//保存开战前的原领土面积
+        tipsBeforeGame();
+
+        my.MP-=WinterRussiaMP;
+
+        if(my.attack(enemy)){
+            ui->History->insertPlainText(QString("我们攻下敌军 %1 座城池！\n").arg(QString::number(my.round_hurt,10)));
+        }
+        else {
+            ui->History->insertPlainText("敌军的城墙久攻不下，暂时退军\n");
+        }
+        ui->History->insertPlainText("敌军本回合因大雪封城，无法出击\n");
+
+        sumHurt +=my.round_hurt;
+        endBattle(Origin_MYHP);
+    }
+
+
+}
