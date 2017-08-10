@@ -1,0 +1,28 @@
+﻿生成启动时间为 2017/8/9 22:16:21。
+     1>项目“C:\Users\87702\Desktop\History-of-Land\SRC\branch\HOL_CSharp\HOL_CSharp\HOL_CSharp\HOL_CSharp.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\HOL_CSharp.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib HOL_CSharp.cpp LoginDlg.cpp
+         HOL_CSharp.cpp
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “P”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “G”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “C”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “A”: 不可识别的字符转义序列
+         LoginDlg.cpp
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “P”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “G”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “C”: 不可识别的字符转义序列
+     1>c:\users\87702\desktop\history-of-land\src\branch\hol_csharp\hol_csharp\hol_csharp\SystemWindow.h(253): warning C4129: “A”: 不可识别的字符转义序列
+         正在生成代码...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\87702\Desktop\History-of-Land\SRC\branch\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\HOL_CSharp.LoginDlg.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.SystemWindow.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\87702\Desktop\History-of-Land\SRC\branch\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\HOL_CSharp.obj
+         Debug\LoginDlg.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         HOL_CSharp.vcxproj -> C:\Users\87702\Desktop\History-of-Land\SRC\branch\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.exe
+     1>已完成生成项目“C:\Users\87702\Desktop\History-of-Land\SRC\branch\HOL_CSharp\HOL_CSharp\HOL_CSharp\HOL_CSharp.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.74
