@@ -1,0 +1,30 @@
+﻿生成启动时间为 2017/8/10 10:26:05。
+     1>项目“C:\Users\87702\Desktop\History-of-Land\SRC\branch\testHOL_CSharp\testHOL_CSharp\testHOL_CSharp\testHOL_CSharp.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\87702\Desktop\History-of-Land\SRC\branch\testHOL_CSharp\testHOL_CSharp\Debug\testHOL_CSharp.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\testHOL_CSharp.LegendsView.resources /ASSEMBLYRESOURCE:Debug\testHOL_CSharp.SystemWindow.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\87702\Desktop\History-of-Land\SRC\branch\testHOL_CSharp\testHOL_CSharp\Debug\testHOL_CSharp.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Legend.obj
+         Debug\testHOL_CSharp.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+     1>testHOL_CSharp.obj : error LNK2020: 无法解析的标记(06000002) testHOL_CSharp.LegendsView::~LegendsView
+     1>Legend.obj : error LNK2020: 无法解析的标记(06000002) testHOL_CSharp.LegendsView::~LegendsView
+     1>AssemblyInfo.obj : error LNK2020: 无法解析的标记(06000002) testHOL_CSharp.LegendsView::~LegendsView
+     1>testHOL_CSharp.obj : error LNK2020: 无法解析的标记(06000004) testHOL_CSharp.LegendsView::creatLegendsModle
+     1>Legend.obj : error LNK2020: 无法解析的标记(06000004) testHOL_CSharp.LegendsView::creatLegendsModle
+     1>AssemblyInfo.obj : error LNK2020: 无法解析的标记(06000004) testHOL_CSharp.LegendsView::creatLegendsModle
+     1>testHOL_CSharp.obj : error LNK2020: 无法解析的标记(06000005) testHOL_CSharp.LegendsView::Dispose
+     1>Legend.obj : error LNK2020: 无法解析的标记(06000005) testHOL_CSharp.LegendsView::Dispose
+     1>AssemblyInfo.obj : error LNK2020: 无法解析的标记(06000005) testHOL_CSharp.LegendsView::Dispose
+     1>testHOL_CSharp.obj : error LNK2020: 无法解析的标记(06000007) testHOL_CSharp.SystemWindow::~SystemWindow
+     1>Legend.obj : error LNK2020: 无法解析的标记(06000007) testHOL_CSharp.SystemWindow::~SystemWindow
+     1>AssemblyInfo.obj : error LNK2020: 无法解析的标记(06000007) testHOL_CSharp.SystemWindow::~SystemWindow
+     1>testHOL_CSharp.obj : error LNK2020: 无法解析的标记(0600000A) testHOL_CSharp.SystemWindow::Dispose
+     1>Legend.obj : error LNK2020: 无法解析的标记(0600000A) testHOL_CSharp.SystemWindow::Dispose
+     1>AssemblyInfo.obj : error LNK2020: 无法解析的标记(0600000A) testHOL_CSharp.SystemWindow::Dispose
+     1>AssemblyInfo.obj : error LNK2011: 未链接预编译对象；映像可能不能运行
+     1>C:\Users\87702\Desktop\History-of-Land\SRC\branch\testHOL_CSharp\testHOL_CSharp\Debug\testHOL_CSharp.exe : fatal error LNK1120: 16 个无法解析的外部命令
+     1>已完成生成项目“C:\Users\87702\Desktop\History-of-Land\SRC\branch\testHOL_CSharp\testHOL_CSharp\testHOL_CSharp\testHOL_CSharp.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.40
