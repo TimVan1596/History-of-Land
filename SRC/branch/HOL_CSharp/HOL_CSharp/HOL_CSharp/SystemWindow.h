@@ -250,7 +250,7 @@ namespace HOL_CSharp {
 	}
 	private: System::Void OpenCDisk_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
 				 this->OpenCDisk->LinkVisited = true;
-				 System::Diagnostics::Process::Start("C:\Program Files (x86)\Google\Chrome\Application\" ");
+//				 System::Diagnostics::Process::Start("C:\Program Files (x86)\Google\Chrome\Application\" ");
 	}
 	};
 }

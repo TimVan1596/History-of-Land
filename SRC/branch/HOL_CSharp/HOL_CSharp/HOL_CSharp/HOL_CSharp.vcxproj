@@ -84,6 +84,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Legend.h" />
+    <ClInclude Include="LegendsView.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LoginDlg.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -99,7 +103,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="HOL_CSharp.cpp" />
-    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="Legend.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -109,6 +113,9 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LegendsView.resx">
+      <DependentUpon>LegendsView.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginDlg.resx">
       <DependentUpon>LoginDlg.h</DependentUpon>
     </EmbeddedResource>

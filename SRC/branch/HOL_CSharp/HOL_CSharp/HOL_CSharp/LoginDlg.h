@@ -18,6 +18,7 @@ namespace HOL_CSharp {
 	public:
 		LoginDlg(void)
 		{
+			isLogin = false;
 			InitializeComponent();
 			//
 			//TODO:  在此处添加构造函数代码
@@ -38,15 +39,13 @@ namespace HOL_CSharp {
 	private: System::Windows::Forms::Label^  Namelabel;
 	private: System::Windows::Forms::Label^  Psdlabel;
 	private: System::Windows::Forms::TextBox^  nameTextBox;
-	protected:
-
-	protected:
-
-
 	private: System::Windows::Forms::TextBox^  PsdtextBox;
-
 	private: System::Windows::Forms::Button^  loginBTN;
 	private: System::Windows::Forms::Button^  QuitBTN;
+			 bool isLogin;  //判断是否成功登陆的bool值
+	public: bool getIsLogin() {
+				 return isLogin;
+			 }
 
 
 	private:
@@ -162,8 +161,9 @@ namespace HOL_CSharp {
 #pragma endregion
 
 	private: System::Void loginBTN_Click(System::Object^  sender, System::EventArgs^  e) {
-				 if (this->nameTextBox->Text == "admin" && this->nameTextBox->Text == "123"){
-
+				 if (this->nameTextBox->Text == "admin" && this->PsdtextBox->Text == "123"){
+					 isLogin = true;
+					 this->DialogResult = DialogResult::OK;
 				 }
 				 else{
 					 MessageBox::Show("账号或密码输入错误，请重试");

@@ -10,10 +10,17 @@ using namespace HOL_CSharp;
 
 int main(array<System::String ^> ^args)
 {
-   // Console::WriteLine(L"Hello World");
-	//application
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew LoginDlg());
+	LoginDlg ^login = gcnew LoginDlg();
+	login->ShowDialog();
+
+	if (login->DialogResult == DialogResult::OK)
+	{
+		SystemWindow ^MainPage = gcnew SystemWindow;
+		MainPage->Show();
+		login->Close();
+	}
     return 0;
 }
