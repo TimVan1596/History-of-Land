@@ -163,7 +163,8 @@ namespace HOL_CSharp {
 	private: System::Void loginBTN_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if (this->nameTextBox->Text == "admin" && this->PsdtextBox->Text == "123"){
 					 isLogin = true;
-					 this->DialogResult = DialogResult::OK;
+					 //this->DialogResult = DialogResult::OK;
+					Close();
 				 }
 				 else{
 					 MessageBox::Show("ÕËºÅ»òÃÜÂëÊäÈë´íÎó£¬ÇëÖØÊÔ");
