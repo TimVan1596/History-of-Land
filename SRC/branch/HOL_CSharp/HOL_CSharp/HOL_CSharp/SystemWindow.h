@@ -1,4 +1,6 @@
 #pragma once
+#include "stdafx.h"
+#include "LegendsView.h"
 
 namespace HOL_CSharp {
 
@@ -102,6 +104,7 @@ namespace HOL_CSharp {
 			this->ClassicGame->TabIndex = 1;
 			this->ClassicGame->Text = L"千古江山";
 			this->ClassicGame->UseVisualStyleBackColor = false;
+			this->ClassicGame->Click += gcnew System::EventHandler(this, &SystemWindow::ClassicGame_Click);
 			// 
 			// BrawlGame
 			// 
@@ -245,12 +248,25 @@ namespace HOL_CSharp {
 
 	private: System::Void QuitBTN_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 MessageBox::Show("Fuck U , Quit");
-				 Close();
+				 System::Windows::Forms::DialogResult  ^isClose  = MessageBox::Show("您真的要退出游戏吗？",
+														   "退出游戏",
+														   MessageBoxButtons::OKCancel,
+														   MessageBoxIcon::Question,
+														   MessageBoxDefaultButton::Button1);
+
+				 if (*isClose == System::Windows::Forms::DialogResult::OK)
+				 {
+					 Close();
+				 } 
+
 	}
 	private: System::Void OpenCDisk_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
 				 this->OpenCDisk->LinkVisited = true;
 //				 System::Diagnostics::Process::Start("C:\Program Files (x86)\Google\Chrome\Application\" ");
 	}
-	};
+	private: System::Void ClassicGame_Click(System::Object^  sender, System::EventArgs^  e) {
+				 LegendsView ^choose = gcnew LegendsView;
+				 choose->ShowDialog();
+	}
+};
 }

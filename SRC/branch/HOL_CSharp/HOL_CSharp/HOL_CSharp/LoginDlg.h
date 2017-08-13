@@ -107,7 +107,8 @@ namespace HOL_CSharp {
 			this->PsdtextBox->Location = System::Drawing::Point(29, 81);
 			this->PsdtextBox->MinimumSize = System::Drawing::Size(4, 31);
 			this->PsdtextBox->Name = L"PsdtextBox";
-			this->PsdtextBox->Size = System::Drawing::Size(231, 21);
+			this->PsdtextBox->PasswordChar = '*';
+			this->PsdtextBox->Size = System::Drawing::Size(231, 31);
 			this->PsdtextBox->TabIndex = 3;
 			// 
 			// loginBTN
@@ -163,8 +164,7 @@ namespace HOL_CSharp {
 	private: System::Void loginBTN_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if (this->nameTextBox->Text == "admin" && this->PsdtextBox->Text == "123"){
 					 isLogin = true;
-					 //this->DialogResult = DialogResult::OK;
-					Close();
+					 this->DialogResult = System::Windows::Forms::DialogResult::OK;
 				 }
 				 else{
 					 MessageBox::Show("ÕËºÅ»òÃÜÂëÊäÈë´íÎó£¬ÇëÖØÊÔ");
