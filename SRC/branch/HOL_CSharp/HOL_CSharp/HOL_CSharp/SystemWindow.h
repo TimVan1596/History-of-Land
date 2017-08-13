@@ -22,10 +22,11 @@ namespace HOL_CSharp {
 			InitializeComponent();
 			//
 			//TODO:  在此处添加构造函数代码
-			legends[0]->initiate("大汉帝国", 210, 24, 13, 13);
-			legends[1]->initiate("罗马帝国", 195, 21, 19, 15);
-			legends[2]->initiate("大英帝国", 150, 20, 25, 22);
-			legends[3]->initiate("纳粹帝国", 140, 31, 20, 7);
+			array<Legend^> ^legends = gcnew array<Legend^>(4);
+			//legends[0]->initiate("大汉帝国", 210, 24, 13, 13);
+			//legends[1]->initiate("罗马帝国", 195, 21, 19, 15);
+			//legends[2]->initiate("大英帝国", 150, 20, 25, 22);
+			//legends[3]->initiate("纳粹帝国", 140, 31, 20, 7);
 			//
 			
 		}
@@ -63,7 +64,8 @@ namespace HOL_CSharp {
 		/// 必需的设计器变量。
 		/// </summary>
 		System::ComponentModel::Container ^components;
- 		Legend ^legends[4];  //保存四个周免英雄
+ 		//Legend[] legends;  
+		array<Legend ^> ^legends; //保存官方提供的，以及用户自己创建的英雄
 
 
 #pragma region Windows Form Designer generated code

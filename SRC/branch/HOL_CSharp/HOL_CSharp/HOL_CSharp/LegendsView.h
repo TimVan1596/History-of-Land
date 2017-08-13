@@ -1,4 +1,4 @@
-#pragma once
+				#pragma once
 
 namespace HOL_CSharp {
 
@@ -8,7 +8,7 @@ namespace HOL_CSharp {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+				
 	/// <summary>
 	/// LegendsView ժҪ
 	/// </summary>

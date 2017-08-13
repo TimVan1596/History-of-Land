@@ -9,7 +9,7 @@ double Legend::Random(double start, double end) {
     return start+(end-start)*rand()/(RAND_MAX + 1.0);
 }
 
-void Legend::initiate(string name,int HP,int ATK, int DFS, int MP)
+void Legend::initiate(String ^name,int HP,int ATK, int DFS, int MP)
 {
     this->name = name;
     this->ATK  = ATK;
@@ -22,7 +22,11 @@ void Legend::initiate(string name,int HP,int ATK, int DFS, int MP)
 
 Legend::Legend()
 {
-
+	name = "NULL";
+	HP = 9999;
+	ATK = 9999;
+	DFS = 9999;
+	MP = 9999;
 }
 
 
@@ -30,7 +34,7 @@ Legend::~Legend() {
 
 }
 
-bool Legend::attack(Legend &enemy) {
+bool Legend::attack(Legend %enemy) {
 
     check(*this);
     check(enemy);
@@ -48,7 +52,7 @@ bool Legend::attack(Legend &enemy) {
 }
 
 
-void Legend::check(Legend &legend)
+void Legend::check(Legend %legend)
 //检查英雄所有属性，确保属性不会小于0
 
 {
