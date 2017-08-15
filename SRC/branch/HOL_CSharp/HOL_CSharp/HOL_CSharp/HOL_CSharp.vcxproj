@@ -84,6 +84,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Legend.h" />
     <ClInclude Include="LegendsView.h">
       <FileType>CppForm</FileType>
@@ -102,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="HOL_CSharp.cpp" />
     <ClCompile Include="Legend.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -113,6 +117,9 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LegendsView.resx">
       <DependentUpon>LegendsView.h</DependentUpon>
     </EmbeddedResource>

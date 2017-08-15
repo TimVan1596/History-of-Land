@@ -1,3 +1,4 @@
+  HOL_CSharp.Game.resources - Embedded, ContainedInManifestFile, 
   HOL_CSharp.LegendsView.resources - Embedded, ContainedInManifestFile, 
   HOL_CSharp.LoginDlg.resources - Embedded, ContainedInManifestFile, 
   HOL_CSharp.SystemWindow.resources - Embedded, ContainedInManifestFile, 
@@ -18,9 +19,24 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
 	hash=None, flags=None
+Class HOL_CSharp.Game: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    InitializeWindows(Legend, Legend): PrivateScope, Public, HideBySig
+    InitializeWindows(): PrivateScope, Public, HideBySig
 Class HOL_CSharp.LegendsView: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    cliext.vector<Legend ^> Legends IsByValue : Public, InitOnly
+  Properties:
+    Int32 SumLegends 'get set' : 
+  Methods:
+    InitializeWindows(): PrivateScope, Public, HideBySig
+    updateListView(): PrivateScope, Public, HideBySig
+    get_SumLegends(): PrivateScope, Public, HideBySig, SpecialName
+    set_SumLegends(Int32): PrivateScope, Public, HideBySig, SpecialName
 Class HOL_CSharp.SystemWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

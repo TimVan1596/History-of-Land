@@ -275,7 +275,8 @@ namespace HOL_CSharp {
 	private: System::Void ClassicGame_Click(System::Object^  sender, System::EventArgs^  e) {
 				 LegendsView ^choose = gcnew LegendsView;
 				 choose->Legends = Legends;
-				 choose->ShowDialog();
+				 choose->SumLegends = 4;   ///传输数据
+				 choose->InitializeWindows();
 	}
 	private:void creatLegends() {
 				Legend ^ han = gcnew Legend("大汉帝国", 210, 24, 13, 13);
