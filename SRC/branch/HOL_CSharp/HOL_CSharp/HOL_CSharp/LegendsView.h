@@ -1,4 +1,6 @@
-				#pragma once
+#pragma once
+#include<cliext/vector>
+#include "Legend.h"
 
 namespace HOL_CSharp {
 
@@ -8,7 +10,9 @@ namespace HOL_CSharp {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-				
+	using namespace std;
+	using namespace cliext;
+
 	/// <summary>
 	/// LegendsView 摘要
 	/// </summary>
@@ -20,6 +24,7 @@ namespace HOL_CSharp {
 			InitializeComponent();
 			//
 			//TODO:  在此处添加构造函数代码
+		//	Legends = gcnew  vector<Legend^>;
 			//
 		}
 
@@ -34,13 +39,23 @@ namespace HOL_CSharp {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^  LegendsTableView;
+	private: System::Windows::Forms::ListView^  listView1;
+	private: System::Windows::Forms::ColumnHeader^  name;
+	private: System::Windows::Forms::ColumnHeader^  HP;
+	private: System::Windows::Forms::ColumnHeader^  ATK;
+	private: System::Windows::Forms::ColumnHeader^  DFS;
+
 	protected:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  name;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  HP;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  ATK;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  DFS;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  MP;
+
+	protected:
+
+
+
+
+
+
+	//所有初始变量均放置于此
+	public: property vector<Legend^> Legends;	//保存从SystemWindow页面中传回来的英雄类
 
 	private:
 		/// <summary>
@@ -55,74 +70,58 @@ namespace HOL_CSharp {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->LegendsTableView = (gcnew System::Windows::Forms::DataGridView());
-			this->name = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->HP = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ATK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DFS = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->MP = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LegendsTableView))->BeginInit();
+			this->listView1 = (gcnew System::Windows::Forms::ListView());
+			this->name = (gcnew System::Windows::Forms::ColumnHeader());
+			this->HP = (gcnew System::Windows::Forms::ColumnHeader());
+			this->ATK = (gcnew System::Windows::Forms::ColumnHeader());
+			this->DFS = (gcnew System::Windows::Forms::ColumnHeader());
 			this->SuspendLayout();
 			// 
-			// LegendsTableView
+			// listView1
 			// 
-			this->LegendsTableView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->LegendsTableView->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
-			this->LegendsTableView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->LegendsTableView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
-				this->name,
-					this->HP, this->ATK, this->DFS, this->MP
+			this->listView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(4) {
+				this->name, this->HP, this->ATK,
+					this->DFS
 			});
-			this->LegendsTableView->Location = System::Drawing::Point(80, 115);
-			this->LegendsTableView->Name = L"LegendsTableView";
-			this->LegendsTableView->ReadOnly = true;
-			this->LegendsTableView->RowTemplate->Height = 23;
-			this->LegendsTableView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->LegendsTableView->Size = System::Drawing::Size(547, 262);
-			this->LegendsTableView->TabIndex = 1;
+			this->listView1->FullRowSelect = true;
+			this->listView1->GridLines = true;
+			this->listView1->Location = System::Drawing::Point(83, 137);
+			this->listView1->Name = L"listView1";
+			this->listView1->Size = System::Drawing::Size(532, 285);
+			this->listView1->TabIndex = 0;
+			this->listView1->UseCompatibleStateImageBehavior = false;
+			this->listView1->View = System::Windows::Forms::View::Details;
+			this->listView1->SelectedIndexChanged += gcnew System::EventHandler(this, &LegendsView::listView1_SelectedIndexChanged);
 			// 
 			// name
 			// 
-			this->name->HeaderText = L"帝国";
-			this->name->Name = L"name";
-			this->name->ReadOnly = true;
+			this->name->Text = L"帝国";
 			// 
 			// HP
 			// 
-			this->HP->HeaderText = L"领土面积";
-			this->HP->Name = L"HP";
-			this->HP->ReadOnly = true;
+			this->HP->Text = L"领土面积";
 			// 
 			// ATK
 			// 
-			this->ATK->HeaderText = L"军队";
-			this->ATK->Name = L"ATK";
-			this->ATK->ReadOnly = true;
+			this->ATK->Text = L"军队";
 			// 
 			// DFS
 			// 
-			this->DFS->HeaderText = L"守备";
-			this->DFS->Name = L"DFS";
-			this->DFS->ReadOnly = true;
-			// 
-			// MP
-			// 
-			this->MP->HeaderText = L"民心";
-			this->MP->Name = L"MP";
-			this->MP->ReadOnly = true;
+			this->DFS->Text = L"守备";
 			// 
 			// LegendsView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(725, 529);
-			this->Controls->Add(this->LegendsTableView);
+			this->Controls->Add(this->listView1);
 			this->Name = L"LegendsView";
 			this->Text = L"LegendsView";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LegendsTableView))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void listView1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	}
 	};
 }

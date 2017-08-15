@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "LegendsView.h"
 #include "Legend.h"
+#include<cliext/vector>
 
 namespace HOL_CSharp {
 
@@ -12,6 +13,8 @@ namespace HOL_CSharp {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Diagnostics;
+	using namespace std;
+	using namespace cliext;
 
 	/// <summary>
 	/// SystemWindow 摘要
@@ -22,13 +25,10 @@ namespace HOL_CSharp {
 			InitializeComponent();
 			//
 			//TODO:  在此处添加构造函数代码
-			array<Legend^> ^legends = gcnew array<Legend^>(4);
-			//legends[0]->initiate("大汉帝国", 210, 24, 13, 13);
-			//legends[1]->initiate("罗马帝国", 195, 21, 19, 15);
-			//legends[2]->initiate("大英帝国", 150, 20, 25, 22);
-			//legends[3]->initiate("纳粹帝国", 140, 31, 20, 7);
+			Legends = gcnew vector<Legend ^>;
+			creatLegends();  
 			//
-			
+
 		}
 
 	protected:
@@ -53,8 +53,7 @@ namespace HOL_CSharp {
 	private: System::Windows::Forms::LinkLabel^  BaiduLLB;
 	private: System::Windows::Forms::LinkLabel^  RiBaoLLB;
 
-
-
+	private:vector<Legend^> Legends; //保存官方提供的，以及用户自己创建的英雄
 
 
 	protected:
@@ -64,8 +63,7 @@ namespace HOL_CSharp {
 		/// 必需的设计器变量。
 		/// </summary>
 		System::ComponentModel::Container ^components;
- 		//Legend[] legends;  
-		array<Legend ^> ^legends; //保存官方提供的，以及用户自己创建的英雄
+		//Legend[] legends;  
 
 
 #pragma region Windows Form Designer generated code
@@ -258,26 +256,37 @@ namespace HOL_CSharp {
 
 	private: System::Void QuitBTN_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 System::Windows::Forms::DialogResult  ^isClose  = MessageBox::Show("您真的要退出游戏吗？",
-														   "退出游戏",
-														   MessageBoxButtons::OKCancel,
-														   MessageBoxIcon::Question,
-														   MessageBoxDefaultButton::Button1);
+				 System::Windows::Forms::DialogResult  ^isClose = MessageBox::Show("您真的要退出游戏吗？",
+																				   "退出游戏",
+																				   MessageBoxButtons::OKCancel,
+																				   MessageBoxIcon::Question,
+																				   MessageBoxDefaultButton::Button1);
 
 				 if (*isClose == System::Windows::Forms::DialogResult::OK)
 				 {
 					 Close();
-				 } 
+				 }
 
 	}
 	private: System::Void OpenCDisk_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
 				 this->OpenCDisk->LinkVisited = true;
-//				 System::Diagnostics::Process::Start("C:\Program Files (x86)\Google\Chrome\Application\" ");
+				 //				 System::Diagnostics::Process::Start("C:\Program Files (x86)\Google\Chrome\Application\" ");
 	}
 	private: System::Void ClassicGame_Click(System::Object^  sender, System::EventArgs^  e) {
 				 LegendsView ^choose = gcnew LegendsView;
+				 choose->Legends = Legends;
 				 choose->ShowDialog();
 	}
+	private:void creatLegends() {
+				Legend ^ han = gcnew Legend("大汉帝国", 210, 24, 13, 13);
+				Legends.push_back(han);
+				Legend ^ roman = gcnew Legend("罗马帝国", 195, 21, 19, 15);
+				Legends.push_back(roman);
+				Legend ^ british = gcnew Legend("大英帝国", 150, 20, 25, 22);
+				Legends.push_back(british);
+				Legend ^ nazi = gcnew Legend("纳粹帝国", 140, 31, 20, 7);
+				Legends.push_back(nazi);
+	}
 
-};
+	};
 }
