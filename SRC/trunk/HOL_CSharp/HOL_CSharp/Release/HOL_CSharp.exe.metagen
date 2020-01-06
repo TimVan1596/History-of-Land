@@ -1,0 +1,158 @@
+  HOL_CSharp.ContractUS.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.customWindow.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.detailCustom.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.Game.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.GameRecord.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.HelpPage.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.LegendsView.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.LoginDlg.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.MutiGame.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.RankListWindow.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.SettingPage.resources - Embedded, ContainedInManifestFile, 
+  HOL_CSharp.SystemWindow.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly HOL_CSharp, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class Legend: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String name : Public
+    Boolean isAlive : Public
+    Int32 HP : Public
+    Int32 ATK : Public
+    Int32 DFS : Public
+    Int32 MP : Public
+    Int32 round_hurt : Public
+    Int32 AtkType : Public
+    Boolean isHardWin : Public
+    Int32 arrRand : Public
+  Methods:
+    initiate(String, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    copyOther(Legend IsImplicitlyDereferenced IsConst): PrivateScope, Public, HideBySig
+    attack(Legend IsImplicitlyDereferenced): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BowATK(Legend IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class HOL_CSharp.GameRecord: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    User userAccount : Public
+    System.ComponentModel.Container components : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+    initiate(Boolean(HasFieldMarshal), Int32, Int32, Int32): PrivateScope, Public, HideBySig
+Class HOL_CSharp.Game: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    User userAccount : Public
+    System.Random rnd : Public, Static
+  Methods:
+    InitializeWindows(Legend, Legend): PrivateScope, Public, HideBySig
+    OnTimedEvent(Object, ElapsedEventArgs): PrivateScope, Public, HideBySig
+Class HOL_CSharp.MutiGame: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    User userAccount : Public
+  Methods:
+    InitializeWindows(Legend, Legend): PrivateScope, Public, HideBySig
+Class HOL_CSharp.LegendsView: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    cliext.vector<Legend ^> Legends IsByValue : Public, InitOnly
+    User userAccount : Public
+    Boolean setEditorVisible : Public
+    Boolean setProcessVisible : Public
+    Boolean setInfoLineVisible : Public
+    Boolean setViewEditEnable : Public
+    Boolean setOkButtonVisible : Public
+    Boolean setBackButtonVisible : Public
+    Boolean isMutiMode : Public
+  Properties:
+    Int32 SumLegends 'get set' : 
+  Methods:
+    InitializeWindows(): PrivateScope, Public, HideBySig
+    updateListView(): PrivateScope, Public, HideBySig
+    get_SumLegends(): PrivateScope, Public, HideBySig, SpecialName
+    set_SumLegends(Int32): PrivateScope, Public, HideBySig, SpecialName
+    OnTimedEvent(Object, ElapsedEventArgs): PrivateScope, Public, HideBySig
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.RankListWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    cliext.vector<User ^> userlist IsByValue : Public, InitOnly
+    User userAccount : Public
+    Int32 sumUserNums : Public
+  Methods:
+    InitializeWindows(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.detailCustom: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Legend cache : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.customWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    User userAccount : Public
+    cliext.vector<Legend ^> Legends IsByValue : Public, InitOnly
+  Methods:
+    InitializeWindows(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.HelpPage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class HOL_CSharp.ContractUS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class HOL_CSharp.SettingPage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 sumUserNums : Public
+    cliext.vector<User ^> userlist IsByValue : Public, InitOnly
+    User userAccount : Public
+    cliext.vector<Legend ^> Legends IsByValue : Public, InitOnly
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.SystemWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BTNBACKGROUNDLOC : Public
+    Int32 sumUserNums : Public
+    cliext.vector<User ^> userlist IsByValue : Public, InitOnly
+    User userAccount : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+    updateUserInfoPanel(): PrivateScope, Public, HideBySig
+Class HOL_CSharp.LoginDlg: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 sumUserNums : Public
+    cliext.vector<User ^> userlist IsByValue : Public, InitOnly
+    User userAccount : Public
+  Methods:
+    getIsLogin(): PrivateScope, Public, HideBySig

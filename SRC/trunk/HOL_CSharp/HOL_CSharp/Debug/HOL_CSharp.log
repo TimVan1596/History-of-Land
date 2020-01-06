@@ -1,0 +1,102 @@
+﻿生成启动时间为 2017/8/24 2:25:39。
+     1>项目“C:\Users\87702\Desktop\[2017-8-23 175553]HOL_CS\HOL_CS\SRC\trunk\HOL_CSharp\HOL_CSharp\HOL_CSharp.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\HOL_CSharp.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Legend.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\GameRecord.h(63): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(284): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(66): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(68): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(84): warning C4244: “*=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(85): warning C4244: “*=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(133): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(1648): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(1785): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\Game.h(1832): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(267): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(77): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(80): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(83): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(111): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(113): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(153): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(155): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\MutiGame.h(1162): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\LegendsView.h(173): warning C4677: “Legends”:  非私有成员的签名包含程序集私有类型“cliext::vector<Legend ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\LegendsView.h(183): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\RankListWindow.h(61): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“cliext::vector<User ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\RankListWindow.h(61): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\RankListWindow.h(62): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\RankListWindow.h(243): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\RankListWindow.h(356): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\customWindow.h(66): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\customWindow.h(72): warning C4677: “Legends”:  非私有成员的签名包含程序集私有类型“cliext::vector<Legend ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\customWindow.h(301): warning C4101: “readyEdit”: 未引用的局部变量
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\customWindow.h(325): warning C4101: “readyEdit”: 未引用的局部变量
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SettingPage.h(57): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“cliext::vector<User ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SettingPage.h(57): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SettingPage.h(58): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SettingPage.h(59): warning C4677: “Legends”:  非私有成员的签名包含程序集私有类型“cliext::vector<Legend ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SystemWindow.h(91): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“cliext::vector<User ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SystemWindow.h(91): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\SystemWindow.h(92): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\LoginDlg.h(75): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“cliext::vector<User ^>”
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\LoginDlg.h(75): warning C4677: “userlist”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+     1>c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\LoginDlg.h(76): warning C4677: “userAccount”:  非私有成员的签名包含程序集私有类型“User”
+                 c:\users\87702\desktop\[2017-8-23 175553]hol_cs\hol_cs\src\trunk\hol_csharp\hol_csharp\User.h(9) : 参见“User”的声明
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\HOL_CSharp.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp CommonHelper.cpp ContractUS.cpp Game.cpp GameRecord.cpp HOL_CSharp.cpp HelpPage.cpp Legend.cpp MutiGame.cpp RankListWindow.cpp SettingPage.cpp User.cpp customWindow.cpp detailCustom.cpp
+         AssemblyInfo.cpp
+         CommonHelper.cpp
+         ContractUS.cpp
+         Game.cpp
+         GameRecord.cpp
+         HOL_CSharp.cpp
+         HelpPage.cpp
+         Legend.cpp
+     1>Legend.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>Legend.cpp(15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>Legend.cpp(53): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         MutiGame.cpp
+         RankListWindow.cpp
+         SettingPage.cpp
+         User.cpp
+         customWindow.cpp
+         detailCustom.cpp
+         正在生成代码...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\87702\Desktop\[2017-8-23 175553]HOL_CS\HOL_CS\SRC\trunk\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\HOL_CSharp.ContractUS.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.customWindow.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.detailCustom.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.Game.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.GameRecord.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.HelpPage.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.LegendsView.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.LoginDlg.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.MutiGame.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.RankListWindow.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.SettingPage.resources /ASSEMBLYRESOURCE:Debug\HOL_CSharp.SystemWindow.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\87702\Desktop\[2017-8-23 175553]HOL_CS\HOL_CS\SRC\trunk\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\CommonHelper.obj
+         Debug\ContractUS.obj
+         Debug\customWindow.obj
+         Debug\detailCustom.obj
+         Debug\Game.obj
+         Debug\GameRecord.obj
+         Debug\HelpPage.obj
+         Debug\HOL_CSharp.obj
+         Debug\Legend.obj
+         Debug\MutiGame.obj
+         Debug\RankListWindow.obj
+         Debug\SettingPage.obj
+         Debug\stdafx.obj
+         Debug\User.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         HOL_CSharp.vcxproj -> C:\Users\87702\Desktop\[2017-8-23 175553]HOL_CS\HOL_CS\SRC\trunk\HOL_CSharp\HOL_CSharp\Debug\HOL_CSharp.exe
+     1>已完成生成项目“C:\Users\87702\Desktop\[2017-8-23 175553]HOL_CS\HOL_CS\SRC\trunk\HOL_CSharp\HOL_CSharp\HOL_CSharp.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.73
